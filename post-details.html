@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="details.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Post details</title>
+</head>
+<body>
+<!-- HEADER  -->
+    <header class="header">
+        <h1>The Blogg</h1> 
+    </header>
+
+<!-- link back to index -->
+    <a href="index.html" class="back-link"> &#8592 Go back to all post</a>
+
+<!-- article with id paragraphs for post details -->
+        <article class="post-details">
+            <h1 id="title" id="post-details">Loading...</h1>
+            <p id="body"></p>
+            <p id="tags"></p>
+            <p id="reactions"></p>
+            <p id ="views"></p>
+        </article>
+
+<!-- Edit post form -->
+    <button class="togglebtn">Edit Post</button> 
+        <div id="edit-container" hidden>
+            <form id="edit_form">
+                <label for="edit_title">Title</label><br>
+                <input type="text" id="edit_title" name="title" required><br>
+
+                <label for="edit_body">Content</label><br>
+                <textarea id="edit_body" rows= "4" cols="30" name="body" required></textarea><br>
+                <button type="submit" id="savebtn">Save</button>
+            </form>
+        </div>
+<!-- comment section  -->
+    <section id="comments">
+        <h2>Comments</h2>
+        <div id="comments"></div>  
+    </section>  
+
+    <!-- FORM -->  
+    <div class="form-container">
+        <h2>Write a comment</h2>
+        
+        <form id="comment-form">    
+        <label for="user_name">Name</label>
+        <input type="text" id="user_name" name="user_name" required><br>
+
+        <label for="text">Comment</label>
+        <textarea id="text" rows= "4" cols="30" name="comment" required></textarea>
+
+        <label for="nickname">Nickname</label>
+        <input type="text" id="nickname" placeholder="@" name="nickname" required><br>
+
+        <button class="add-btn" type="submit">Post comment</button>
+        </form>
+    </div>    
+
+    <footer>
+        <p>&copy; 2026 Javascript dynamic blog</p>
+    </footer>    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Blogg</title>
+</head>
+<body>
+
+<!-- HEADER  -->
+    <header class="header">
+        <h1>The Blog</h1> 
+    </header>  
+
+        <!-- Search, filter and sort div -->
+        <div class="postSearch">
+            <input type="text" id="userInput" placeholder="Search titles..." name="title">
+
+            <select id="sort-reactions">
+                <option value="">Reactions</option>
+                <option value="likes">Most Likes</option>
+            </select>
+
+            <select id="tag-selector">
+                <option value="">All tags</option>
+            </select>            
+        </div>
+        
+    <!-- Blog div  -->  
+    <h1>Posts</h1>
+    <div class="posts-cards"></div>
+        
+    <footer>
+        <p>&copy; 2026 Javascript dynamic blog</p>
+    </footer>
+</body>
+</html>

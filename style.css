@@ -1,0 +1,232 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+}
+:root {
+    --head--foot-color: #091834;
+    --primary-bg-color: #233146;
+    --primary-color: whitesmoke;
+    --card-color: #142842;
+    --border-color: #677b79;
+
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--primary-bg-color);
+}
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    background-color: var(--head--foot-color); 
+    border: solid var(--head--foot-color) 0.5rem;
+}
+h1, p {
+    color: whitesmoke;
+    text-align: center;
+}
+.back-link {
+    color: whitesmoke;
+    text-decoration: none;
+} 
+
+/* Media queries for small screen */
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+    }
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        gap: 25px;
+        position: absolute; top: 50px; left: 0; right: 0;
+        background: var(--head--foot-color);  
+    }
+    .menu-list.active {
+        display: flex;
+    }
+    .menu-list a {
+        display: block;
+    }
+}
+
+/* Search bar */
+.postSearch {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    background-color: var(--head--foot-color); 
+    border: solid 10px var(--head--foot-color);
+}
+
+#userInput {
+    padding: 10px 20px 12px 15px;
+    width: 35%;
+}
+
+#tag-selector {
+    padding: 10px 20px 12px 15px;
+    width: 35%;
+}
+
+#sort-reactions {
+    padding: 10px 20px 12px 15px;
+    width: 35%;
+}
+
+/* Post card container */
+.posts-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    gap: 2rem;
+    background-color: var(--primary-bg-color);
+    font-size: 1rem;
+    color: var(--primary-color);
+    padding: 2rem;
+}
+
+/* Card style */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: var(--card-color);
+    color: var(--primary-color);
+    border: solid 5px #677b79;
+    padding: 35px;
+}
+
+/* Delete button */
+.delete {
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+/* More details button */
+.details {
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+/* Media queries for small screen */
+@media (max-width: 630px) { 
+    .posts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .posts-cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+  
+/* POST DETAILS SECOND PAGE */
+.post-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: #233146;
+    font-size: 1rem;
+    color: whitesmoke;
+    padding: 2rem; 
+}
+
+/* Edit post hidden form */
+#edit-container.active {    
+    display: flex;
+}
+
+.hidden {
+    display: none;
+}
+
+.togglebtn {
+    border: solid 10px wh;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-left: 25px;
+}
+
+/* Hidden edit form */
+#edit_form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--primary-bg-color);
+    font-size: 1rem;
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
+#savebtn {
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+/* Comments section */
+#comments {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    font-size: 1rem;
+    color: whitesmoke;
+    padding: 1rem;
+}
+
+/* Comments div */
+.commentList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    background-color: #142842;
+    color: whitesmoke;
+    border: solid 5px #677b79;
+    padding: 25px;
+}
+
+/* Comments div */
+h2 {
+    color: var(--primary-color);
+}
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    background-color: #233146;
+    font-size: 1rem;
+    color: whitesmoke;
+    padding: 1rem; 
+}
+.add-btn {
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+/* the footer */
+footer {
+    height: 60px;
+    color: whitesmoke;
+    background-color: var(--head--foot-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
